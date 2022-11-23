@@ -1,0 +1,526 @@
+{
+  "Config": {
+    "Build": {
+      "Board": "esp32:esp32:esp32:PSRAM=disabled,PartitionScheme=default,CPUFreq=240,FlashMode=qio,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,LoopCore=1,EventsCore=1,DebugLevel=none,EraseFlash=none"
+    }
+  },
+  "Version": "2",
+  "Product": "Visuino Pro - Visual Arduino Programming",
+  "Content": "OpenWire Diagram",
+  "Units": [
+    {
+      "Name": "__OpenWireRootUnit__",
+      "*": [
+        {
+          "X": 960,
+          "Name": "Arduino",
+          "Instance": {
+            "Serial": {
+              "*": [
+                {
+                  "+": "TArduinoHardwareSerial"
+                },
+                {
+                  "+": "TArduinoESP32DefinedPinsSerial1"
+                },
+                {
+                  "+": "TArduinoESP32DefinedPinsSerial2"
+                }
+              ]
+            },
+            "+": "TArduinoBoard",
+            "Modules": {
+              "*": [
+                {
+                  "RemoteConnectedOutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.HTTPClient1.Requests.GET.ClockInputPin",
+                        "ID": "__OpenWireRootUnit__.HTTPClient1.Requests._Item0.ClockInputPin"
+                      }
+                    ]
+                  },
+                  "HostName": "",
+                  "+": "TArduinoESP32WiFiModule",
+                  "AccessPoints": {
+                    "*": [
+                      {
+                        "Password": "20122020",
+                        "SSID": "Marina.Thiago.2G",
+                        "+": "TArduinoESP32WiFiModuleRemoteAccessPoint"
+                      },
+                      {
+                        "Password": "naolembro31",
+                        "SSID": "thianog.eth",
+                        "+": "TArduinoESP32WiFiModuleRemoteAccessPoint"
+                      }
+                    ]
+                  },
+                  "Sockets": {
+                    "*": [
+                      {
+                        "InputPin": {
+                          "SourcePins": [
+                            {
+                              "ID": "__OpenWireRootUnit__.HTTPClient1.OutputPin"
+                            }
+                          ]
+                        },
+                        "DisconnectInputPin": {
+                          "SourcePins": [
+                            {
+                              "ID": "__OpenWireRootUnit__.Delay1.OutputPin"
+                            }
+                          ]
+                        },
+                        "+": "TArduinoESP32WiFiTCPSecureClientSocket",
+                        "Host": "www.bitstamp.net",
+                        "PrivateKey": "",
+                        "Name": "TCP Secure Client1",
+                        "Certificate": "",
+                        "ConnectedOutputPin": {
+                          "SinkPins": [
+                            {
+                              "ID": "__OpenWireRootUnit__.Delay1.StartInputPin"
+                            }
+                          ]
+                        },
+                        "CACert": "\t-----BEGIN CERTIFICATE-----\r\nMIIEtjCCA56gAwIBAgIQDHmpRLCMEZUgkmFf4msdgzANBgkqhkiG9w0BAQsFADBs\r\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\r\nd3cuZGlnaWNlcnQuY29tMSswKQYDVQQDEyJEaWdpQ2VydCBIaWdoIEFzc3VyYW5j\r\nZSBFViBSb290IENBMB4XDTEzMTAyMjEyMDAwMFoXDTI4MTAyMjEyMDAwMFowdTEL\r\nMAkGA1UEBhMCVVMxFTATBgNVBAoTDERpZ2lDZXJ0IEluYzEZMBcGA1UECxMQd3d3\r\nLmRpZ2ljZXJ0LmNvbTE0MDIGA1UEAxMrRGlnaUNlcnQgU0hBMiBFeHRlbmRlZCBW\r\nYWxpZGF0aW9uIFNlcnZlciBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC\r\nggEBANdTpARR+JmmFkhLZyeqk0nQOe0MsLAAh\/FnKIaFjI5j2ryxQDji0\/XspQUY\r\nuD0+xZkXMuwYjPrxDKZkIYXLBxA0sFKIKx9om9KxjxKws9LniB8f7zh3VFNfgHk\/\r\nLhqqqB5LKw2rt2O5Nbd9FLxZS99RStKh4gzikIKHaq7q12TWmFXo\/a8aUGxUvBHy\r\n\/Urynbt\/DvTVvo4WiRJV2MBxNO723C3sxIclho3YIeSwTQyJ3DkmF93215SF2AQh\r\ncJ1vb\/9cuhnhRctWVyh+HA1BV6q3uCe7seT6Ku8hI3UarS2bhjWMnHe1c63YlC3k\r\n8wyd7sFOYn4XwHGeLN7x+RAoGTMCAwEAAaOCAUkwggFFMBIGA1UdEwEB\/wQIMAYB\r\nAf8CAQAwDgYDVR0PAQH\/BAQDAgGGMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEF\r\nBQcDAjA0BggrBgEFBQcBAQQoMCYwJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRp\r\nZ2ljZXJ0LmNvbTBLBgNVHR8ERDBCMECgPqA8hjpodHRwOi8vY3JsNC5kaWdpY2Vy\r\ndC5jb20vRGlnaUNlcnRIaWdoQXNzdXJhbmNlRVZSb290Q0EuY3JsMD0GA1UdIAQ2\r\nMDQwMgYEVR0gADAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5j\r\nb20vQ1BTMB0GA1UdDgQWBBQ901Cl1qCt7vNKYApl0yHU+PjWDzAfBgNVHSMEGDAW\r\ngBSxPsNpA\/i\/RwHUmCYaCALvY2QrwzANBgkqhkiG9w0BAQsFAAOCAQEAnbbQkIbh\r\nhgLtxaDwNBx0wY12zIYKqPBKikLWP8ipTa18CK3mtlC4ohpNiAexKSHc59rGPCHg\r\n4xFJcKx6HQGkyhE6V6t9VypAdP3THYUYUN9XR3WhfVUgLkc3UHKMf4Ib0mKPLQNa\r\n2sPIoc4sUqIAY+tzunHISScjl2SFnjgOrWNoPLpSgVh5oywM395t6zHyuqB8bPEs\r\n1OG9d4Q3A84ytciagRpKkk47RpqF\/oOi+Z6Mo8wNXrM9zwR4jxQUezKcxwCmXMS1\r\noVWNWlZopCJwqjyBcdmdqEU79OX2olHdx3ti6G8MdOu42vi\/hw15UJGQmxg7kVkn\r\n8TUoE6smftX3eg==\r\n-----END CERTIFICATE-----"
+                      }
+                    ]
+                  },
+                  "AccessPoint": {
+                    "SSID": "",
+                    "Password": ""
+                  },
+                  "ESPNow": {
+                    "PrimaryKey": {
+                      "_Data": ""
+                    }
+                  }
+                },
+                {
+                  "+": "TArduinoEEPROMModule"
+                },
+                {
+                  "+": "TArduinoESP32ProcessorModule"
+                },
+                {
+                  "+": "TArduinoESP32HallSensorModule"
+                },
+                {
+                  "+": "TArduinoESP32BluetoothLEModule"
+                },
+                {
+                  "+": "TTTGOTDisplayESP32ButtonsModule"
+                },
+                {
+                  "Orientation": "goRight",
+                  "Elements": {
+                    "*": [
+                      {
+                        "Name": "Draw Text1",
+                        "Text": "MIN.24H",
+                        "+": "TArduinoColorGraphicsElementDrawText",
+                        "Size": 2
+                      },
+                      {
+                        "InputPin": {
+                          "SourcePin": {
+                            "Name": "__OpenWireRootUnit__.SplitJSON1.Elements.low.OutputPin",
+                            "ID": "__OpenWireRootUnit__.SplitJSON1.Elements._Item3.OutputPin"
+                          }
+                        },
+                        "Size": 3,
+                        "+": "TArduinoColorGraphicsElementTextFeld",
+                        "Name": "Text Field1",
+                        "Color": 4294956800,
+                        "InitialValue": "",
+                        "Y": 20
+                      },
+                      {
+                        "InputPin": {
+                          "SourcePin": {
+                            "Name": "__OpenWireRootUnit__.SplitJSON1.Elements.ask.OutputPin",
+                            "ID": "__OpenWireRootUnit__.SplitJSON1.Elements._Item10.OutputPin"
+                          }
+                        },
+                        "Size": 3,
+                        "+": "TArduinoColorGraphicsElementTextFeld",
+                        "Name": "Text Field2",
+                        "Color": 4294956800,
+                        "InitialValue": "",
+                        "Y": 66
+                      },
+                      {
+                        "Name": "Draw Text2",
+                        "Text": "VALOR",
+                        "+": "TArduinoColorGraphicsElementDrawText",
+                        "Size": 2,
+                        "Y": 48
+                      },
+                      {
+                        "Name": "Draw Text3",
+                        "Text": "% 24h",
+                        "+": "TArduinoColorGraphicsElementDrawText",
+                        "Size": 2,
+                        "Y": 92
+                      },
+                      {
+                        "InputPin": {
+                          "SourcePin": {
+                            "Name": "__OpenWireRootUnit__.SplitJSON1.Elements.percent_change_24.OutputPin",
+                            "ID": "__OpenWireRootUnit__.SplitJSON1.Elements._Item0.OutputPin"
+                          }
+                        },
+                        "Size": 3,
+                        "+": "TArduinoColorGraphicsElementTextFeld",
+                        "Name": "Text Field3",
+                        "Color": 4294956800,
+                        "InitialValue": "",
+                        "Y": 110
+                      },
+                      {
+                        "X": 100,
+                        "Name": "Draw Text4",
+                        "Text": "MAX.24H",
+                        "+": "TArduinoColorGraphicsElementDrawText",
+                        "Size": 2
+                      },
+                      {
+                        "InputPin": {
+                          "SourcePin": {
+                            "Name": "__OpenWireRootUnit__.SplitJSON1.Elements.high.OutputPin",
+                            "ID": "__OpenWireRootUnit__.SplitJSON1.Elements._Item5.OutputPin"
+                          }
+                        },
+                        "Size": 3,
+                        "+": "TArduinoColorGraphicsElementTextFeld",
+                        "X": 100,
+                        "Name": "Text Field4",
+                        "Color": 4294956800,
+                        "InitialValue": "",
+                        "Y": 20
+                      },
+                      {
+                        "X": 100,
+                        "Name": "Draw Bitmap1",
+                        "+": "TArduinoColorGraphicsElementDrawBitmap",
+                        "Bitmap": {
+                          "Data": "AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8CAAD\/BgQG\/wwSGP8TLDn\/FT1Q\/xhLZf8cVnT\/G1Vz\/xhKZP8WP1P\/Eys4\/wsQFP8GBAX\/AgAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8DAAD\/Dxwk\/xlCVv8ibY\/\/KpXL\/yyr5f8tvfn\/L8f\/\/zDO\/\/8x0v\/\/MdL\/\/zDO\/\/8vyP\/\/Lbz5\/yuq4\/8plcr\/JHGT\/xlCVf8OGyP\/AwAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/BwEB\/xk8T\/8lep7\/Lq\/m\/zDO\/\/8v3f\/\/MOD\/\/zDc\/\/8t1P\/\/K8z\/\/yvF\/\/8rwf7\/K8H+\/yzE\/\/8szP\/\/LdP\/\/zDc\/\/8w4P\/\/MN3\/\/zDP\/\/8uref\/JHeb\/xk5S\/8GAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wgAAf8eSFv\/LZrJ\/y\/K\/\/8v2\/\/\/Lt3\/\/y3N\/\/8nsOn\/IIq1\/xhrlf8SUG3\/DThN\/wkoOv8MIzD\/DCMw\/wooOf8NN0z\/Ek1q\/xdokf8fh7P\/Jqzm\/yzM\/\/8v3v\/\/L9v\/\/zDK\/\/8qlcP\/GkJW\/wcAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Figy\/yuPtf8wzf\/\/Ltv\/\/y3U\/\/8puPb\/HoKv\/xFKZf8IHy7\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Bxwp\/w9GYP8ce6X\/Kbbz\/y3U\/\/8v3v\/\/MMz\/\/yqPtP8WJS\/\/AQAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wcAAP8laIL\/MsX6\/y3Z\/\/8t1f\/\/KbPx\/xhojv8HHSn\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Bhgj\/xdegf8nquX\/LdX\/\/y7d\/\/8yxPn\/JmWA\/wcAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/EBMa\/y2NtP8w1\/\/\/Ldf\/\/yrA\/\/8bdJ3\/CSAu\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8HFyH\/F2mR\/ym6+\/8t2v\/\/MNj\/\/y2Ms\/8OEhj\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8SGiP\/MKbQ\/y7a\/\/8t0f\/\/J6rl\/w49VP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/w0wQ\/8kn9b\/LNP\/\/y\/b\/\/8wpc\/\/FBsg\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xQgKv8wtOf\/LNf\/\/y3P\/\/8egrD\/BBEX\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wYWHv8PO03\/FFd0\/xlpjf8ccJn\/HHCZ\/xlpj\/8UWHX\/ET9R\/wcaJv8AAAL\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8DCg7\/Gnag\/y3N\/\/8u2v\/\/MrPk\/xMgKP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Ehcc\/zCm1v8t1v\/\/Ls7\/\/xt5of8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wYSGf8TTmv\/H4m0\/yap6\/8rv\/\/\/Lcf\/\/y7L\/\/8uzv\/\/Lsz\/\/y3K\/\/8tx\/\/\/LMH\/\/yiv8v8gjr3\/FFNw\/wcZIv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xlojP8tzP\/\/Ldr\/\/y+l1P8RFBj\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8CAAL\/KZjL\/y\/Z\/\/8u0P\/\/G3CZ\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8GERj\/HGuO\/yiw6\/8uz\/\/\/Lc3\/\/y3Q\/\/8tzv\/\/LMn\/\/yq6\/\/8psv\/\/KsD\/\/yzL\/\/8sy\/\/\/LMP\/\/yu9\/\/8ty\/\/\/LtH\/\/ym38\/8bdZz\/CBok\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8XYIP\/LtD\/\/y3Z\/\/8tmcr\/CQQF\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8baY\/\/LtX\/\/y7U\/\/8cfKf\/AQAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xNQbv8mrOH\/LtH\/\/yzF\/\/8quP\/\/KbX+\/yaj2v8lmsf\/JqDT\/yiz9\/8qu\/\/\/Jqzo\/yWbyP8lm8r\/KKvo\/ym5\/\/8ptP\/\/Kbb\/\/yvD\/\/8v0P\/\/KLTt\/xVef\/8AAAH\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/G2yR\/y7U\/\/8v1\/\/\/KXOX\/wQAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xA2TP8uyv\/\/MNv\/\/yWd0f8CBQr\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8DBw3\/HH6l\/y7S\/\/8sxf\/\/Kbb\/\/ym0\/\/8rwP\/\/KbP1\/w4rPv8DAQP\/BhEb\/yGXyf8x3v\/\/GFx9\/wQBBP8DAgT\/FGCC\/y3N\/\/8qtf\/\/Kbb\/\/ym1\/\/8ptf\/\/K8L\/\/y7U\/\/8gjrf\/BhId\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/yGOv\/8v2\/\/\/Mcz\/\/x9DV\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/1VVVf\/T09P\/09PT\/9PT0\/\/T09P\/09PT\/9PT0\/9VVVX\/hoaG\/9PT0\/8AAAD\/AAAA\/wAAAP+UlJT\/vLy8\/9PT0\/+vr6\/\/VVVV\/wAAAP8AAAD\/09PT\/4aGhv8AAAD\/AAAA\/1VVVf\/T09P\/oqKi\/wAAAP\/T09P\/09PT\/9PT0\/\/T09P\/09PT\/9PT0\/8AAAD\/hoaG\/9PT0\/\/T09P\/09PT\/8jIyP+ioqL\/VVVV\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DBQa\/yyq5P8w2\/\/\/KLTs\/wgfLP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wYaJ\/8koNT\/MNX\/\/yq8\/\/8ptP\/\/Kbb\/\/ym1\/\/8rwf\/\/KrP2\/wkbJv8AAAD\/AAAA\/x+Uw\/804v\/\/FlNv\/wAAAP8AAAD\/D1d0\/y7Q\/\/8qtf\/\/Kbb\/\/ym2\/\/8ptv\/\/KbT\/\/yq6\/\/8v1P\/\/J63k\/wonN\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wYSG\/8nqN\/\/Lt7\/\/y+s5v8PFBn\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/0FBQf+ioqL\/oqKi\/9PT0\/\/q6ur\/oqKi\/6Kiov9BQUH\/oqKi\/\/\/\/\/\/8AAAD\/AAAA\/7y8vP\/19fX\/oqKi\/3d3d\/\/IyMj\/9fX1\/1VVVf8AAAD\/\/\/\/\/\/6Kiov8AAAD\/VVVV\/\/X19f\/T09P\/KSkp\/wAAAP\/\/\/\/\/\/vLy8\/6Kiov+ioqL\/oqKi\/6Kiov8AAAD\/oqKi\/\/\/\/\/\/9mZmb\/ZmZm\/5SUlP\/f39\/\/9fX1\/ykpKf8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/GGKF\/zHW\/\/8v1P\/\/EU5s\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Aw4X\/ySo1v8v0\/\/\/KbX\/\/ym0\/\/8ptf\/\/KbX\/\/ym0\/\/8rv\/\/\/KrP3\/wskMv8AAAD\/AAcM\/yCVyP8z3v\/\/F1p6\/wAAAP8AAAD\/EV19\/y7M\/\/8qtP\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym1\/\/8ptP\/\/LtD\/\/yi35v8IHSr\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8PPVT\/LtH\/\/y\/Y\/\/8nbJD\/AQAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/6Kiov\/T09P\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/VVVV\/\/\/\/\/\/9mZmb\/AAAA\/wAAAP8AAAD\/vLy8\/4aGhv8AAAD\/\/\/\/\/\/6Kiov+Ghob\/9fX1\/7y8vP8AAAD\/AAAA\/wAAAP\/\/\/\/\/\/ZmZm\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/AAAA\/wAAAP9mZmb\/\/\/\/\/\/2ZmZv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8DEBn\/JrLy\/zHh\/\/8hlMj\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8DCQ\/\/I5vL\/y\/X\/\/8ptP\/\/KbX\/\/yzF\/\/8uyf\/\/Lcj\/\/y3H\/\/8w0v\/\/Lsb\/\/wsnOP8AAAD\/AAgO\/yOm2v83+P\/\/GWWF\/wAAAP8AAAD\/E2aH\/zHf\/\/8svv\/\/Kbj\/\/ym0\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/KbT\/\/y\/T\/\/8mrdz\/BhUe\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/HoGv\/y\/f\/\/8vvf3\/EBoj\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/6Kiov\/T09P\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/lJSU\/\/X19f8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/\/\/\/\/\/9\/f3\/\/\/\/\/\/\/39\/f\/wAAAP8AAAD\/AAAA\/wAAAP\/\/\/\/\/\/39\/f\/9PT0\/\/T09P\/09PT\/6+vr\/8AAAD\/oqKi\/\/\/\/\/\/+ioqL\/oqKi\/6Kiov\/q6ur\/39\/f\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8TW4D\/MNr\/\/y3I\/f8NMkT\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8cfKb\/MNn\/\/yq1\/\/8ptv\/\/Kbb9\/ySg2P8hms7\/IpzS\/yKc0v8jqdr\/I57R\/wkfK\/8AAAD\/AQYJ\/xx5nv8psNH\/EkRb\/wAAAP8AAAD\/EFFr\/yrB6v8ruvf\/Lcv\/\/y7M\/\/8rvP\/\/KbT\/\/ym2\/\/8ptv\/\/KbX\/\/ym0\/\/8w1\/\/\/II+8\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/ByAt\/ym79P8v3f\/\/Im2T\/wEAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/6Kiov\/T09P\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/lJSU\/\/\/\/\/\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/\/\/\/\/\/\/X19f+ioqL\/\/\/\/\/\/6+vr\/8AAAD\/AAAA\/wAAAP\/\/\/\/\/\/vLy8\/6Kiov+ioqL\/oqKi\/4aGhv8AAAD\/oqKi\/\/\/\/\/\/+ioqL\/vLy8\/\/\/\/\/\/\/T09P\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wILE\/8kpeT\/M+P\/\/yCIuv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/w4+U\/8u1f\/\/Krz\/\/ym0\/\/8rwf\/\/KrXz\/wofLP8AAwf\/AQUJ\/wAFCf8ACA\/\/AQYK\/wABAf8AAAD\/AAAA\/wIBAv8BAAj\/AAAA\/wAAAP8AAAD\/AQMF\/wcXJv8MMET\/FVp6\/yKUwv8tyf\/\/LMT\/\/ym0\/\/8ptv\/\/Kbb\/\/ym1\/\/8quP\/\/L9f\/\/xJRbf8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xp2oP8w4P\/\/LbHu\/w8ZIP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/6Kiov\/T09P\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/ZmZm\/\/\/\/\/\/9VVVX\/AAAA\/wAAAP8AAAD\/09PT\/7y8vP8AAAD\/\/\/\/\/\/6Kiov8AAAD\/lJSU\/\/\/\/\/\/+Ghob\/AAAA\/wAAAP\/\/\/\/\/\/ZmZm\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/AAAA\/3d3d\/\/\/\/\/\/\/oqKi\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xtZd\/8v0\/\/\/Lcv\/\/w03Tf8AAAD\/AAAA\/wAAAP8AAAD\/BQ0T\/yet4\/8uzf\/\/KLL\/\/ym2\/\/8rwv\/\/KrTy\/wYQFf8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wEBA\/8QQlv\/Kbfx\/yzE\/\/8ptf\/\/Kbb\/\/ym2\/\/8psv\/\/Lcj\/\/yq89P8GGiP\/AAAA\/wAAAP8AAAD\/AAAA\/wonNv8rw\/\/\/MNf\/\/x5bef8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/6Kiov\/T09P\/AAAA\/wAAAP8AAAD\/oqKi\/\/\/\/\/\/8AAAD\/AAAA\/7y8vP\/19fX\/lJSU\/3d3d\/\/IyMj\/\/\/\/\/\/1VVVf8AAAD\/\/\/\/\/\/6Kiov8AAAD\/AAAA\/7y8vP\/19fX\/VVVV\/wAAAP\/\/\/\/\/\/lJSU\/2ZmZv9mZmb\/ZmZm\/2ZmZv8pKSn\/oqKi\/\/\/\/\/\/8AAAD\/AAAA\/wAAAP+ioqL\/\/\/\/\/\/2ZmZv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/BAID\/yuVx\/8x4P\/\/I57Y\/wIHC\/8AAAD\/AAAA\/wAAAP8AAAD\/F1p3\/zDU\/\/8ptv\/\/Kbb\/\/ym2\/\/8rwf\/\/KrTz\/woYIf8BAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DTRJ\/yq++f8rvf\/\/KbX\/\/ym2\/\/8ptv\/\/KbX\/\/y\/V\/\/8YbY\/\/AAAA\/wAAAP8AAAD\/AAAA\/wEBBP8hkcT\/MOL\/\/ymQxP8EAQL\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/4aGhv+vr6\/\/AAAA\/wAAAP8AAAD\/hoaG\/9PT0\/8AAAD\/AAAA\/wAAAP+UlJT\/yMjI\/9PT0\/+vr6\/\/ZmZm\/wAAAP8AAAD\/09PT\/4aGhv8AAAD\/AAAA\/ykpKf\/IyMj\/yMjI\/wAAAP\/T09P\/09PT\/9PT0\/\/T09P\/09PT\/9PT0\/9VVVX\/hoaG\/9PT0\/8AAAD\/AAAA\/wAAAP8AAAD\/yMjI\/8jIyP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/BRYh\/yi1+\/8w2\/\/\/FmWF\/wAAAP8AAAD\/AAAA\/wAAAP8CChH\/Jabd\/y7L\/\/8ps\/\/\/Kbb\/\/ym2\/\/8puf\/\/KbX8\/yOWzv8jkMb\/JJrM\/xFGXP8BAAD\/AAAA\/wAAAP8AAAD\/AQAB\/xRWcP8hhKr\/GnOb\/xZnh\/8SSVv\/BRAc\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xlxmv8tzf\/\/KbX\/\/ym2\/\/8ptv\/\/KbP\/\/y3F\/\/8ps+v\/BRUh\/wAAAP8AAAD\/AAAA\/wAAAP8SVHL\/Ltj\/\/y68\/\/8QHSb\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DTxT\/yzL\/\/8uyv\/\/DTdO\/wAAAP8AAAD\/AAAA\/wAAAP8PP1X\/LMn\/\/yq5\/\/8ptf\/\/Kbb\/\/ym2\/\/8ptf\/\/Kbb\/\/yzI\/\/8ty\/\/\/Md7\/\/yav4\/8DDRb\/AAAA\/wAAAP8AAAD\/AwAD\/yWcx\/8y5P\/\/Lcr\/\/y3M\/\/8tzP\/\/KLPk\/w46Tv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/w03T\/8syf\/\/Krr\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8uzv\/\/E1Rw\/wAAAP8AAAD\/AAAA\/wAAAP8JJTb\/K8D5\/zDT\/\/8cTGP\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/FGOK\/zDb\/\/8osen\/BA8X\/wAAAP8AAAD\/AAAA\/wAAAP8ceJz\/LtD\/\/ymz\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym1\/\/8ptP\/\/LcT\/\/yOp4\/8CFB\/\/AAAA\/wAAAP8AAAD\/AgAC\/yGKtv8ty\/\/\/KbP\/\/ym1\/\/8ptv\/\/L9T\/\/yas5v8FERr\/AAAA\/wAAAP8AAAD\/AAAA\/wwoOf8swf\/\/Kr3\/\/ym2\/\/8ptv\/\/Kbb\/\/ymz\/\/8uz\/\/\/IIq3\/wAAAP8AAAD\/AAAA\/wAAAP8CAwb\/JKLZ\/zHe\/\/8icZn\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8DAAD\/IYe6\/zHh\/\/8hkcb\/AAAA\/wAAAP8AAAD\/AAAA\/wIFCf8lo97\/Lcn\/\/ym0\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgAC\/yGLtv8tzP\/\/KbT\/\/ym2\/\/8ptP\/\/Krz\/\/yvA\/v8MLT7\/AAAA\/wAAAP8AAAD\/AAAA\/wssP\/8sxf\/\/Krz\/\/ym2\/\/8ptv\/\/Kbb\/\/ym1\/\/8sxv\/\/KLHw\/wUQGP8AAAD\/AAAA\/wAAAP8AAAD\/HYGy\/zHh\/\/8njMD\/BAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8MERX\/LKXd\/y\/d\/\/8ceKP\/AAAA\/wAAAP8AAAD\/AAAA\/wgdKP8qu\/j\/LML\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgAC\/yGMuf8tzv\/\/Kbb\/\/yq5\/\/8rvv\/\/Md3\/\/ySj2\/8EDRP\/AAAA\/wAAAP8AAAD\/AAAA\/xJMav8tzv\/\/Krf\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8rvv\/\/LMX\/\/w0vQP8AAAD\/AAAA\/wAAAP8AAAD\/GGeJ\/zDd\/\/8podr\/CgwP\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8PJjH\/LbXz\/y7X\/\/8XYoH\/AAAA\/wAAAP8AAAD\/AAAA\/w88Uf8tx\/\/\/Kr3\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgAE\/yWdx\/8z5f\/\/Lsv\/\/y3L\/\/8sxvz\/I5vE\/wkkMf8AAAD\/AAAA\/wAAAP8AAAD\/AwYK\/yWf1v8sxv\/\/KbX\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8quv\/\/Lcz\/\/xJPbP8AAAD\/AAAA\/wAAAP8AAAD\/Ek1k\/y7V\/\/8ts\/D\/DyEq\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/2ZmZv9mZmb\/ZmZm\/2ZmZv9VVVX\/AAAA\/wAAAP9mZmb\/QUFB\/wAAAP8AAAD\/AAAA\/wAAAP9mZmb\/QUFB\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8PLz\/\/Lb3\/\/y3S\/\/8TUWn\/AAAA\/wAAAP8AAAD\/AAAA\/xNRbv8uzP\/\/Krr\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgIC\/xRJXv8baYv\/F119\/xJNZv8LLjv\/AQIJ\/wAAAP8AAAD\/AAAA\/wAAAP8IIC3\/JaPU\/y\/U\/\/8ps\/\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8pt\/\/\/Lc\/\/\/xhjiP8AAAD\/AAAA\/wAAAP8AAAD\/EkFU\/y7P\/\/8uvP7\/Dys5\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/\/f39\/\/09PT\/9PT0\/\/\/\/\/\/\/hoaG\/wAAAP+8vLz\/9fX1\/0FBQf8AAAD\/AAAA\/6+vr\/\/19fX\/VVVV\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8SNEb\/L8H\/\/y3P\/\/8VSV\/\/AAAA\/wAAAP8AAAD\/AAAA\/xZcf\/8vzv\/\/Kbj\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8KJjX\/IYy2\/yzC\/\/8tx\/\/\/KbT\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/LtD\/\/xhslv8AAAD\/AAAA\/wAAAP8AAAD\/DjdJ\/yzJ\/\/8vxP\/\/EjRG\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/9mZmb\/AAAA\/wAAAP+vr6\/\/39\/f\/wAAAP8pKSn\/39\/f\/9\/f3\/8AAAD\/d3d3\/\/\/\/\/\/93d3f\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8UN0r\/MMP\/\/y3N\/\/8VRlz\/AAAA\/wAAAP8AAAD\/AAAA\/xdegf8vzv\/\/Kbj\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wsqO\/8msuf\/LMX\/\/ym1\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Ls\/\/\/xdumf8AAAD\/AAAA\/wAAAP8AAAD\/CTFE\/ynG\/\/8vxv\/\/EzhN\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/+UlJT\/ZmZm\/4aGhv\/f39\/\/r6+v\/wAAAP8AAAD\/VVVV\/\/X19f+vr6\/\/9fX1\/6Kiov8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8RNEb\/L8D\/\/y3Q\/\/8USmH\/AAAA\/wAAAP8AAAD\/AAAA\/xZbff8vzv\/\/Kbj\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AQAA\/w4\/Vf8XZYv\/F1x+\/xFTc\/8QRl7\/CSUx\/wEAA\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8NNk3\/KsH+\/yq6\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/L9D\/\/xlqk\/8AAAD\/AAAA\/wAAAP8AAAD\/EDpM\/y3L\/\/8vwv\/\/ETJD\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/\/f39\/\/09PT\/9PT0\/\/\/\/\/\/\/r6+v\/wAAAP8AAAD\/AAAA\/4aGhv\/\/\/\/\/\/09PT\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8QLj7\/Lbz\/\/y7U\/\/8TU27\/AAAA\/wAAAP8AAAD\/AAAA\/xFLZ\/8ty\/\/\/Krr\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AwED\/yWcx\/8z5v\/\/Lsz\/\/y7N\/\/8tyv\/\/K8L5\/yScyv8NN03\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Hom8\/yzI\/\/8ptv\/\/Kbb\/\/ym2\/\/8puP\/\/Ls7\/\/xddgf8AAAD\/AAAA\/wAAAP8AAAD\/EUNX\/y7Q\/\/8uufr\/Dyc0\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/9mZmb\/AAAA\/wAAAP9mZmb\/\/\/\/\/\/1VVVf8AAAD\/AAAA\/wAAAP\/\/\/\/\/\/ZmZm\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8OISr\/LLHt\/y7Z\/\/8YZ4n\/AAAA\/wAAAP8AAAD\/AAAA\/w0zRv8sxf\/\/Kr7\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgAC\/yKOuf8uz\/\/\/Kbb\/\/yq5\/\/8qu\/\/\/K8D\/\/y\/V\/\/8rwvz\/CSQz\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/F2CD\/y3N\/\/8pt\/\/\/Kbb\/\/ym2\/\/8qu\/\/\/Lcv\/\/xFIYf8AAAD\/AAAA\/wAAAP8AAAD\/E1Rv\/y7W\/\/8sr+z\/Dh0l\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/9mZmb\/AAAA\/wAAAP+ioqL\/\/\/\/\/\/1VVVf8AAAD\/AAAA\/wAAAP\/\/\/\/\/\/ZmZm\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8KDQ\/\/KqDX\/zDd\/\/8dfq\/\/AAAA\/wAAAP8AAAD\/AAAA\/wYXIP8pt\/b\/LMP\/\/ym1\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgAC\/yGLtv8tzP\/\/KbT\/\/ym2\/\/8ptv\/\/KbX\/\/ym0\/\/8v0\/\/\/F2qP\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/F1l7\/y3M\/\/8puP\/\/Kbb\/\/ym2\/\/8rwP\/\/K8H\/\/wsnNf8AAAD\/AAAA\/wAAAP8AAAD\/GW2S\/zDe\/\/8qntf\/CQoK\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/19fX\/r6+v\/wAAAP8AAAD\/AAAA\/wAAAP\/\/\/\/\/\/ZmZm\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8EAAD\/J4e5\/zDe\/\/8jmtD\/AAAB\/wAAAP8AAAD\/AAAA\/wACA\/8imc7\/Lsz\/\/ym0\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptf\/\/LcX\/\/yOm3v8CEhz\/AAAA\/wAAAP8AAAD\/AgAC\/yGLtv8tzP\/\/KbT\/\/ym2\/\/8ptv\/\/KbX\/\/yq3\/\/8v1P\/\/FVl6\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/FmGE\/y7N\/\/8pt\/\/\/Kbb\/\/ym0\/\/8tyP\/\/Jqjk\/wIJDv8AAAD\/AAAA\/wAAAP8AAAD\/IIu\/\/zHh\/\/8lhLb\/AwAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/IW2T\/y\/Z\/\/8qtvD\/CBgj\/wAAAP8AAAD\/AAAA\/wAAAP8Zaon\/LtH\/\/ymz\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/KbX\/\/yq5\/\/8rvf\/\/L87\/\/yay7f8DFSD\/AAAA\/wAAAP8AAAD\/AgAC\/yORvv8v1P\/\/K7v\/\/yu+\/\/8rwf\/\/Lcn\/\/y\/X\/\/8lpN7\/BRIa\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/G3ef\/y3N\/\/8ptv\/\/Kbb\/\/ymz\/\/8u0P\/\/HX2l\/wAAAP8AAAD\/AAAA\/wAAAP8ECQ7\/Jqri\/zHd\/\/8gaIz\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/GUBT\/y7J\/\/8uzv\/\/EEJc\/wAAAP8AAAD\/AAAA\/wAAAP8MLUD\/K8P+\/yq9\/\/8ptf\/\/Kbb\/\/ym2\/\/8ptv\/\/KbX\/\/ym7\/\/8pvf7\/Ls\/\/\/yGYxf8BCRD\/AAAA\/wAAAP8AAAD\/AwAD\/yKQuf8u1\/\/\/Kr3\/\/yq8+\/8ps\/D\/I57X\/xZmgv8ECxL\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8BBgn\/JKXk\/yvC\/\/8ptv\/\/KbX\/\/yq5\/\/8syf\/\/D0BY\/wAAAP8AAAD\/AAAA\/wAAAP8MMkn\/K8n\/\/y\/N\/\/8ZO07\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DRYd\/y21+v8v2v\/\/GnKY\/wAAAP8AAAD\/AAAA\/wAAAP8CAgX\/IZTF\/y7Q\/\/8ps\/\/\/Kbb\/\/ym2\/\/8ptf\/\/Lcf\/\/x6FtP8JKzv\/CzNF\/wYWHv8AAAD\/AAAA\/wAAAP8AAAD\/AQAA\/wgmM\/8LO1H\/CjNG\/wwuPv8KHif\/AQMH\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8TVHT\/Lcn\/\/ym3\/\/8ptv\/\/KbP\/\/y7M\/\/8ko9f\/AgkP\/wAAAP8AAAD\/AAAA\/wAAAP8WZIX\/Ltz\/\/y2y9P8NExr\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AwAA\/yiNvP8u3f\/\/Jarp\/wMOFf8AAAD\/AAAA\/wAAAP8AAAD\/D0Nc\/y7S\/\/8qu\/\/\/Kbb\/\/ym2\/\/8ptv\/\/LtD\/\/xRVdP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wwwQv8qvfr\/K8L\/\/ym2\/\/8ptv\/\/Kbj\/\/y\/W\/\/8VWHX\/AAAA\/wAAAP8AAAD\/AAAA\/wEFCP8jndX\/MOL\/\/yiFs\/8DAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/x1OZ\/8vzv\/\/LtP\/\/xNNa\/8AAAD\/AAAA\/wAAAP8AAAD\/AQEC\/yKSwv8v0v\/\/KbL\/\/ym2\/\/8qu\/\/\/Lcj\/\/worPf8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8GGSX\/F2aL\/yq8+\/8sxf\/\/KbT\/\/ym2\/\/8osf\/\/Ls\/\/\/ySj1\/8CBgv\/AAAA\/wAAAP8AAAD\/AAAA\/w47Uf8uzv\/\/L8\/\/\/xtKYf8AAAD\/AAAA\/wAAAP8AAAD\/IpfT\/yKX0\/8il9P\/IpfT\/yKX0\/8il9P\/IpfT\/w49Vf8WYIb\/IpfT\/wAAAP8AAAD\/AAAA\/wAAAP8cfa\/\/HH2v\/wAAAP8OPVX\/IpfT\/w49Vf8AAAD\/AAAA\/wAAAP8RSWb\/IpfT\/xNVd\/8AAAD\/AAAA\/wAAAP8OPVX\/IpfT\/xZghv8AAAD\/AAAA\/wAAAP8OPVX\/IpfT\/wAAAP8AAAD\/AAAA\/xFJZv8ehrz\/IpfT\/yKX0\/8adKL\/Dj1V\/wAAAP8AAAD\/AAAA\/wAAAP8OPVX\/GnSi\/yKX0\/8il9P\/II\/I\/xFJZv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/w4SF\/8tqOT\/L97\/\/yGWy\/8BAAL\/AAAA\/wAAAP8AAAD\/AAAA\/wokMf8tyP\/\/LMX\/\/ymz\/\/8qvv\/\/Krv+\/xE+Vf8JHyv\/DCIv\/wwiL\/8MJDP\/CyIu\/wMHCv8AAAD\/AAEB\/wQUHf8HHjL\/BA0S\/wAAAP8AAAD\/BRAY\/wspPf8POEr\/FFh2\/xt+rP8lquL\/Ls3\/\/yvB\/\/8ptP\/\/Kbb\/\/ymz\/\/8rv\/\/\/L9H\/\/w44S\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/yCIt\/8w4f\/\/Lafi\/wwPE\/8AAAD\/AAAA\/wAAAP8AAAD\/GnSi\/xp0ov8adKL\/Kbb\/\/x6GvP8adKL\/GnSi\/wsuQf8adKL\/Kbb\/\/wAAAP8AAAD\/AAAA\/wAAAP8il9P\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8il9P\/Kbb\/\/yan6v8AAAD\/AAAA\/wAAAP8RSWb\/Kbb\/\/ym2\/\/8OPVX\/AAAA\/wAAAP8RSWb\/Kbb\/\/wAAAP8AAAD\/FmCG\/ym2\/\/8mp+r\/HH2v\/xhqlP8il9P\/J6\/1\/xFJZv8AAAD\/AAAA\/w49Vf8nr\/X\/IpfT\/xhqlP8WYIb\/II\/I\/ym2\/\/8WYIb\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8kY4L\/L9X\/\/y7O\/\/8RSGP\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8VV3f\/L9j\/\/yq7\/\/8ptP\/\/KbT+\/ym4+\/8quvr\/Krz9\/yq7\/f8sxv\/\/LLv5\/wsmNf8AAAD\/AQcN\/x+Uwv8x2\/\/\/Flh2\/wAAAP8AAAD\/E19+\/y\/Y\/\/8txv\/\/Lcz\/\/y7M\/\/8sxP\/\/Krf\/\/ym1\/\/8ptv\/\/KbX\/\/yq4\/\/8w2f\/\/GGyR\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DjZL\/yzK\/\/8v2f\/\/Il58\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/wAAAP8AAAD\/AAAA\/wAAAP8il9P\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/wsuQf8ptv\/\/GnSi\/ym2\/\/8TVXf\/AAAA\/wAAAP8RSWb\/Kbb\/\/yev9f8mp+r\/CB0p\/wAAAP8RSWb\/Kbb\/\/wAAAP8AAAD\/J6\/1\/yCPyP8AAAD\/AAAA\/wAAAP8AAAD\/II\/I\/ym2\/\/8AAAD\/AAAA\/yev9f8gj8j\/AAAA\/wAAAP8AAAD\/AAAA\/x6GvP8il9P\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8PFBj\/MLPv\/y7b\/\/8mqeH\/AwoO\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/G3aa\/zHa\/\/8quf\/\/KbT\/\/yq\/\/\/8rwv\/\/K8H\/\/yvA\/\/8ty\/\/\/LL\/\/\/wsmNf8AAAD\/AAcO\/yOi1P838P\/\/GGCB\/wAAAP8AAAD\/EmOD\/zDa\/\/8ru\/\/\/Krj\/\/ym1\/\/8ptP\/\/Kbb\/\/ym2\/\/8ptf\/\/Krj\/\/zDZ\/\/8eh67\/AQMH\/wAAAP8AAAD\/AAAA\/wAAAP8BAgT\/JJnO\/y7g\/\/8wsO3\/DRAU\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/xp0ov8adKL\/GnSi\/xp0ov8mp+r\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/x6GvP8mp+r\/AAAA\/yKX0\/8il9P\/AAAA\/wAAAP8RSWb\/Kbb\/\/xZghv8nr\/X\/II\/I\/wAAAP8RSWb\/Kbb\/\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8AAAD\/EUlm\/ym2\/\/8RSWb\/Dj1V\/ym2\/\/8RSWb\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/I1x4\/y\/T\/\/8u1\/\/\/GmuQ\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AQAA\/x+Hr\/8v2f\/\/K7z\/\/ymz\/\/8ptf\/\/KbX\/\/ym0\/\/8rv\/\/\/KrX3\/wskMv8AAAD\/AAcM\/yCVyP8z3f\/\/F1p5\/wAAAP8AAAD\/EV19\/y7N\/\/8qtf\/\/Kbb\/\/ym2\/\/8ptv\/\/Kbb\/\/ym0\/\/8quf\/\/MNn\/\/yGVwP8DBQr\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8UVHT\/L9f\/\/zDT\/\/8gVnD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/yKX0\/8il9P\/IpfT\/yKX0\/8nr\/X\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/CB0p\/yev9f8adKL\/AAAA\/xZghv8ptv\/\/EUlm\/wAAAP8RSWb\/Kbb\/\/xFJZv8TVXf\/Kbb\/\/xhqlP8RSWb\/Kbb\/\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8AAAD\/CB0p\/ym2\/\/8YapT\/E1V3\/ym2\/\/8OPVX\/AAAA\/wAAAP8il9P\/IpfT\/yKX0\/8il9P\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/CQQF\/yyWx\/8s2P\/\/LMf\/\/w4+V\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wEBA\/8ac5r\/LtD\/\/yzE\/\/8ptP\/\/KbX\/\/ym1\/\/8rwf\/\/KbP1\/wgZJP8AAAD\/AAAA\/x+Twv804v\/\/FVJu\/wAAAP8AAAD\/D1Zz\/y7Q\/\/8qtf\/\/Kbb\/\/ym2\/\/8ptf\/\/KbT\/\/yvB\/\/8u1P\/\/HoKt\/wIGDP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wotQf8qv\/n\/Lt7\/\/yyVyP8HAgL\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/wAAAP8AAAD\/AAAA\/wAAAP8il9P\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/GGqU\/ym2\/\/8ptv\/\/Kbb\/\/ym2\/\/8ptv\/\/II\/I\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/HH2v\/ym2\/\/8YapT\/Kbb\/\/wAAAP8IHSn\/Kbb\/\/x6GvP8AAAD\/AAAA\/wAAAP8AAAD\/E1V3\/ym2\/\/8LLkH\/Cy5B\/ym2\/\/8WYIb\/AAAA\/wAAAP8RSWb\/EUlm\/xhqlP8ptv\/\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/xguOv8wxP7\/LNj\/\/yiy6v8GFyT\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/ElNu\/yrB+\/8uz\/\/\/K73\/\/ym0\/\/8rvv\/\/KbT3\/xE2S\/8GDxP\/Ch0p\/yKazf8w2v\/\/GmWI\/wcQFP8GERb\/F2iM\/y3M\/\/8ptf\/\/KbX\/\/ym1\/\/8qu\/\/\/Ls3\/\/yzH\/\/8XY4L\/AQAB\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/BAsT\/yao3v8t3f\/\/MMD6\/xcsN\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/wAAAP8AAAD\/AAAA\/wAAAP8il9P\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8AAAD\/Jqfq\/x6GvP8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/wsuQf8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/ySf3\/8ptv\/\/Kbb\/\/wAAAP8AAAD\/IpfT\/yev9f8OPVX\/AAAA\/wAAAP8OPVX\/JJ\/f\/ySf3\/8AAAD\/AAAA\/ySf3\/8nr\/X\/Dj1V\/wAAAP8AAAD\/AAAA\/xp0ov8ptv\/\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8iU27\/L9D\/\/y3V\/\/8lo9X\/BxMa\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wkjNP8dha\/\/Lcr\/\/y3O\/\/8qvP\/\/Kbf\/\/yi18f8oseb\/KbPt\/yq2\/P8pt\/\/\/Kbb2\/yix5\/8osuj\/KbX2\/ym2\/\/8ptv\/\/Krz\/\/y3L\/\/8vzf\/\/IY+8\/wwwRP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8ABAj\/IZLA\/y\/Z\/\/8w0P\/\/IExl\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8adKL\/Kbb\/\/wAAAP8AAAD\/AAAA\/wAAAP8il9P\/IpfT\/wAAAP8RSWb\/Kbb\/\/xFJZv8WYIb\/Kbb\/\/xFJZv8AAAD\/AAAA\/wAAAP8IHSn\/Kbb\/\/x6GvP8RSWb\/Kbb\/\/xFJZv8AAAD\/AAAA\/wsuQf8nr\/X\/Kbb\/\/wAAAP8AAAD\/CB0p\/ySf3\/8ptv\/\/Jqfq\/ySf3\/8ptv\/\/JJ\/f\/wgdKf8AAAD\/AAAA\/wgdKf8kn9\/\/Kbb\/\/ySf3\/8il9P\/Jqfq\/ym2\/\/8ehrz\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8FAAD\/KXyg\/y7U\/\/8t1P\/\/JZnM\/wURGv8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DTxR\/x6Jt\/8quv7\/Lcz\/\/y\/W\/\/8v1f\/\/Lc3\/\/yq\/\/\/8qt\/\/\/K8H\/\/y3L\/\/8uzv\/\/Lcv\/\/y3J\/\/8uzP\/\/K73\/\/yCPwf8RRFr\/AgAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wIHDP8chbP\/Ldb\/\/zDW\/\/8pdZr\/AwAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/GnSi\/wsuQf8AAAD\/AAAA\/wAAAP8RSWb\/GnSi\/wAAAP8AAAD\/AAAA\/wAAAP8WYIb\/FmCG\/wAAAP8LLkH\/GnSi\/wsuQf8RSWb\/GnSi\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/FmCG\/xp0ov8LLkH\/GnSi\/wsuQf8AAAD\/AAAA\/wAAAP8RSWb\/GnSi\/wAAAP8AAAD\/AAAA\/wAAAP8OPVX\/GGqU\/xp0ov8RSWb\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/EUlm\/xhqlP8adKL\/FmCG\/wsuQf8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/CwUF\/y2NtP8u2f\/\/LdH\/\/yOez\/8EExv\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8LJDH\/Fl+A\/x+Iv\/8mquT\/Krv7\/y3E\/\/8ryP\/\/K8j\/\/yzE\/\/8rvf7\/J6vm\/yCMw\/8ZZof\/DSk4\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AgkN\/yGQvv8u1P\/\/Ltr\/\/yyGrv8KAgH\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/woHCf8vkLn\/LtX\/\/yzS\/\/8nrOb\/DDdM\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8FDxX\/CiU0\/w40SP8LOVH\/CzlS\/w01Sv8KKDf\/BREY\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8KLD3\/JJ\/Z\/y3U\/\/8v2P\/\/LYu0\/wsFBP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8MCQr\/LIir\/y\/X\/\/8r0\/\/\/Kr3\/\/xVgg\/8CBwv\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AgEC\/xVUdf8ptvb\/LNb\/\/zDX\/\/8rgqX\/CwYH\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/BgAA\/yZkgf8xzf\/\/LNf\/\/y3P\/\/8jnNT\/D0Ne\/wABA\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8PPFL\/IpPH\/yzN\/\/8u2\/\/\/M83\/\/yVfe\/8FAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wEAAP8bO0n\/LqTP\/zDX\/\/8t2f\/\/K8X\/\/yCOw\/8SS2T\/BRIa\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8ECxH\/EEJZ\/x+Huv8rw\/\/\/Ltz\/\/zHa\/\/8vosz\/GzhG\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/DQoN\/ydtiP8xvvP\/L9n\/\/y3a\/\/8sz\/\/\/JaXb\/xlxmv8QP1j\/BhMb\/wEDB\/8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wECBf8EDxf\/DjlP\/xhsk\/8km9H\/LM7\/\/y3c\/\/8w2v\/\/MLrw\/yZrhf8MCAr\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8UHyb\/JW+P\/y6v4\/8w0v\/\/L93\/\/y\/a\/\/8ty\/\/\/KLLu\/yKX0f8cfKb\/GGaH\/xhad\/8QTWr\/D0to\/xdXdf8YZIX\/HHuk\/yKVzf8mrun\/LMr\/\/y7Z\/\/8w3\/\/\/MNL\/\/zCx4\/8ka4v\/EBkg\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AQAA\/xEdJ\/8fVm3\/KZLC\/y+48P8vzv\/\/MNr\/\/zDf\/\/8w3v\/\/L9v\/\/y7X\/\/8t1P\/\/LdX\/\/y\/X\/\/8v2v\/\/L97\/\/zHf\/\/8x2\/\/\/Mc\/\/\/y+58f8qkb\/\/HlNp\/xEdJ\/8BAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/BQAA\/xAaIf8ZSF7\/InCW\/yeIsv8qn9H\/La\/p\/yy39\/8vvf\/\/Lrv7\/yu19P8ssOn\/K6HS\/yaIs\/8gbZP\/G0Zc\/xEaIv8FAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wYAAP8KDxP\/DR8p\/w4nNf8RLT3\/Dyo5\/w0lM\/8NICr\/CxEU\/wUAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/AAAA\/wAAAP8AAAD\/",
+                          "Width": 120,
+                          "Height": 60
+                        },
+                        "Y": 60
+                      }
+                    ]
+                  },
+                  "+": "TTTGOTDisplayESP32DisplayModule"
+                }
+              ]
+            },
+            "I2CChannels": {
+              "*": [
+                {
+                  "+": "TArduinoESP32_TTGO_TS_I2C"
+                },
+                {
+                  "+": "TArduinoESP32_Generic_I2C_2"
+                }
+              ]
+            },
+            "Digital": {
+              "*": [
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoCombinedPullDownAnalogDigitalChannel"
+                },
+                {
+                  "+": "TArduinoESP32CombinedPullDownAnalogDigitalDACChannel"
+                },
+                {
+                  "+": "TArduinoESP32CombinedPullDownAnalogDigitalDACChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoCombinedTouchPullDownAnalogDigitalInterruptChannel"
+                },
+                {
+                  "+": "TArduinoPullDownTouchAnalogInputOnlyChannel"
+                },
+                {
+                  "+": "TArduinoPullDownTouchAnalogInputOnlyChannel"
+                },
+                {
+                  "+": "TArduinoPullDownTouchAnalogInputOnlyChannel"
+                },
+                {
+                  "+": "TArduinoPullDownTouchAnalogInputOnlyChannel"
+                }
+              ]
+            },
+            "SPIChannels": {
+              "*": [
+                {
+                  "+": "TArduinoESP32_TTGO_TDisplay_SPI0"
+                },
+                {
+                  "+": "TArduinoESP32_TTGO_TDisplay_SPI1"
+                }
+              ]
+            },
+            "BoardType": "TTGO T-Display ESP32"
+          },
+          "Type": "Component",
+          "Y": 256
+        },
+        {
+          "X": 656,
+          "Name": "HTTPClient1",
+          "Instance": {
+            "UserAgent": "",
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.Sockets.TCP Secure Client.InputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.Sockets._Item0.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoNetworkProtocolsHTTPClient",
+            "Host": "www.bitstamp.net",
+            "Requests": {
+              "*": [
+                {
+                  "ClockInputPin": {
+                    "SourcePins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.RemoteConnectedOutputPin",
+                        "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.RemoteConnectedOutputPin"
+                      },
+                      {
+                        "ID": "__OpenWireRootUnit__.ClockGenerator1.OutputPin"
+                      }
+                    ]
+                  },
+                  "Name": "GET1",
+                  "+": "TArduinoNetworkProtocolsHTTPClientRequestGET",
+                  "URL": "\/api\/v2\/ticker\/btcusd\/",
+                  "Content": "",
+                  "Response": {
+                    "ContentOutputPin": {
+                      "SinkPins": [
+                        {
+                          "ID": "__OpenWireRootUnit__.CharToText1.InputPin"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "Type": "Component",
+          "Y": 496
+        },
+        {
+          "X": 448,
+          "Name": "SplitJSON1",
+          "Instance": {
+            "Elements": {
+              "*": [
+                {
+                  "Name": "percent_change_24",
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.Arduino.Modules.Display.Elements.Text Field.InputPin",
+                        "ID": "__OpenWireRootUnit__.Arduino.Modules._Item6.Elements._Item5.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "vwap",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "volume",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "low",
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.Arduino.Modules.Display.Elements.Text Field.InputPin",
+                        "ID": "__OpenWireRootUnit__.Arduino.Modules._Item6.Elements._Item1.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "bid",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "high",
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.Arduino.Modules.Display.Elements.Text Field.InputPin",
+                        "ID": "__OpenWireRootUnit__.Arduino.Modules._Item6.Elements._Item7.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "timestamp",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "last",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "open_24",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "open",
+                  "+": "TArduinoSplitJSONTextElement"
+                },
+                {
+                  "Name": "ask",
+                  "OutputPin": {
+                    "SinkPins": [
+                      {
+                        "Name": "__OpenWireRootUnit__.Arduino.Modules.Display.Elements.Text Field.InputPin",
+                        "ID": "__OpenWireRootUnit__.Arduino.Modules._Item6.Elements._Item2.InputPin"
+                      }
+                    ]
+                  },
+                  "+": "TArduinoSplitJSONTextElement"
+                }
+              ]
+            },
+            "InputPin": {
+              "SourcePin": {
+                "ID": "__OpenWireRootUnit__.CharToText1.OutputPin"
+              }
+            },
+            "+": "TArduinoSplitJSON"
+          },
+          "Type": "Component",
+          "Y": 496
+        },
+        {
+          "X": 448,
+          "Name": "ClockGenerator1",
+          "Instance": {
+            "Frequency": 0.200000002980232,
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "Name": "__OpenWireRootUnit__.HTTPClient1.Requests.GET.ClockInputPin",
+                  "ID": "__OpenWireRootUnit__.HTTPClient1.Requests._Item0.ClockInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoClockGenerator"
+          },
+          "Type": "Component",
+          "Y": 400
+        },
+        {
+          "X": 256,
+          "Name": "CharToText1",
+          "Instance": {
+            "ClockInputPin": {
+              "SourcePins": [
+                {
+                  "ID": "__OpenWireRootUnit__.Delay1.OutputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.SplitJSON1.InputPin"
+                }
+              ]
+            },
+            "+": "TArduinoCharToText",
+            "InputPin": {
+              "SourcePin": {
+                "Name": "__OpenWireRootUnit__.HTTPClient1.Requests.GET.Response.ContentOutputPin",
+                "ID": "__OpenWireRootUnit__.HTTPClient1.Requests._Item0.Response.ContentOutputPin"
+              }
+            },
+            "MaxLength": 2000
+          },
+          "Type": "Component",
+          "Y": 336
+        },
+        {
+          "X": 1296,
+          "Name": "Delay1",
+          "Instance": {
+            "StartInputPin": {
+              "SourcePins": [
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.Sockets.TCP Secure Client.ConnectedOutputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.Sockets._Item0.ConnectedOutputPin"
+                }
+              ]
+            },
+            "OutputPin": {
+              "SinkPins": [
+                {
+                  "ID": "__OpenWireRootUnit__.CharToText1.ClockInputPin"
+                },
+                {
+                  "Name": "__OpenWireRootUnit__.Arduino.Modules.WiFi.Sockets.TCP Secure Client.DisconnectInputPin",
+                  "ID": "__OpenWireRootUnit__.Arduino.Modules._Item0.Sockets._Item0.DisconnectInputPin"
+                }
+              ]
+            },
+            "+": "TArduinoDelay",
+            "Interval": 2000000
+          },
+          "Type": "Component",
+          "Y": 464
+        }
+      ],
+      "Type": "Diagram",
+      "Selection": [
+        "Arduino"
+      ]
+    }
+  ]
+}
